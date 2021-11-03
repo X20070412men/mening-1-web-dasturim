@@ -1,0 +1,44 @@
+* {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: calc(100% - 20px);
+	min-height: 100vh;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+.img {
+	width: 14%;
+	background-color: white;
+	height: 100px;
+	background-size: 100% 100%;
+	background: url('../img/itpark.png');
+	background-repeat: no-repeat;
+}
+
+.link {
+	width: 100%;
+	height: 100px;
+}
+
+li{
+	color: #f2f2f3;
+	font-size: 30px;
+	float: right;
+
+}
+
+ul li{
+	list-style: none;
+	padding: 10px;
+
+}
+
+ul li a{
+	text-decoration: none;
+}

@@ -1,0 +1,99 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	overflow: hidden;
+	
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	background-color: ;
+}
+
+a {
+	font-size: 50px;
+}
+
+/*Animasiya*/
+
+.sidebar {
+	width: 700px;
+	height: 100vh;
+	background-color: #000;
+	position: absolute;
+	top: 0;
+	transform: translate(100vw);
+	transition: transform 1s linear;
+	z-index: -1;
+}
+
+input:checked + label::after {
+	content: '';
+}
+
+input:checked ~ .sidebar {
+	transform: translateX(calc(100vw - 600px));
+}
+
+input {
+	width: 0;
+	height: 0;
+	display: none;
+}
+
+label {
+	margin-top: 40px;
+	float: right;
+	display: inline-block;
+	width: 200px;
+	height: 150px;
+	user-select: auto;
+}
+
+.animated-bars,
+.animated-bars::after,
+.animated-bars::before {
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	background-color: royalblue;
+	position: relative;
+	left: 0;
+	border-radius: 20px;
+	transform: translateY(60px);
+	transition: all 1s;
+}
+
+.animated-bars::after,
+.animated-bars::before {
+	content: '';
+	position: absolute;
+	transform: translateY(-60px);
+}
+
+.animated-bars::before { transform: translateY(60px); }
+
+input:checked + label > .animated-bars::after {
+	transform: rotate(-45deg)
+			   translateX(-140px)
+			   translateY(-140px);
+}
+
+input:checked + label > .animated-bars::before {
+	transform: rotate(45deg)
+			   translateX(-140px)
+			   translateY(140px);
+
+}
+
+input:checked + label > .animated-bars {
+	transform: translateY(60px)
+			   translateX(200px);
+	background-color: transparent;
+}
+/*Animasiya*/
